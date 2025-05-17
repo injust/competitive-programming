@@ -2,6 +2,9 @@
 name = "competitive-programming"
 version = "0"
 requires-python = ">=3.14"
+dependencies = [
+  "rich~=15.0",
+]
 
 [tool.ruff]
 line-length = 120
