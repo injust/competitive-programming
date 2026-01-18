@@ -16,6 +16,13 @@ from math import ceil, inf, isqrt, sqrt
 from typing import Any
 
 try:
+    from loguru import logger
+except ModuleNotFoundError:
+    catch = lambda x: x
+else:
+    catch = logger.catch(onerror=lambda _: sys.exit(1))
+
+try:
     from rich import get_console
 except ModuleNotFoundError:
     pass
@@ -37,6 +44,7 @@ eprint = partial(builtins.print, file=sys.stderr)
 fprint = partial(builtins.print, flush=True)
 
 
+@catch
 def solve() -> Any:
     pass
 
