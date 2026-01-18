@@ -3,6 +3,7 @@ name = "competitive-programming"
 version = "0"
 requires-python = ">=3.14"
 dependencies = [
+  "loguru~=0.7",
   "rich~=15.0",
 ]
 
