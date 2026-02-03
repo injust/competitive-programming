@@ -3,14 +3,6 @@ name = "competitive-programming"
 version = "0"
 requires-python = ">=3.14"
 
-[tool.basedpyright]
-reportAny = false
-reportExplicitAny = false
-reportPrivateUsage = false
-reportUnannotatedClassAttribute = false
-reportUnusedCallResult = false
-reportUnusedParameter = false
-
 [tool.ruff]
 line-length = 120
 
@@ -20,7 +12,6 @@ skip-magic-trailing-comma = true
 [tool.ruff.lint]
 select = ["ALL"]
 ignore = [
-  "ANN401",  # any-type
   "C90",  # mccabe
   "COM",  # flake8-commas
   "D",  # pydocstyle
@@ -43,6 +34,21 @@ ignore = [
   "TD005",  # missing-todo-description
   "TRY003",  # raise-vanilla-args
   "TRY400",  # error-instead-of-exception
+
+  "A",  # flake8-builtins
+  "ANN",  # flake8-annotations
+  "B023",  # function-uses-loop-variable
+  "B905",  # zip-without-explicit-strict
+  "BLE",  # flake8-blind-except
+  "E731",  # lambda-assignment
+  "E741",  # ambiguous-variable-name
+  "EM",  # flake8-errmsg
+  "F401",  # unused-import
+  "SIM105",  # suppressible-exception
+  "SIM108",  # if-else-block-instead-of-if-exp
+]
+unfixable = [
+  "SIM114",  # if-with-same-arms
 ]
 
 [tool.ruff.lint.isort]
